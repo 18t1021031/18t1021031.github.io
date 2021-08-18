@@ -1,0 +1,325 @@
+@import 'variables';
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    color: $red-color;
+}
+
+.checkbox-select-all-options{
+    width: 200px;
+    margin: 0 12px;
+}
+/* content */
+
+#content {
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    left: 217px;
+    right: 15px;
+}
+
+#content .lists {
+    margin-top: 25px;
+}
+
+.lists .item{
+    width: 190px;
+    height: 334px;  
+    padding: 10px;
+    display: inline-table;
+    position: relative; 
+    border: 1px solid rgb(211, 211, 211);
+    margin: 5px;
+    transition-duration: 0.3s;
+}
+
+.lists .item:hover {
+    border: 1px solid aqua ;
+    box-shadow: 0 0 10px aqua ;
+}
+
+
+.item img{
+    width: 188px;
+    height: auto;
+    box-shadow: 0 0 3px rgb(211, 211, 211);
+}
+
+.item a{
+    font-size: 15px;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    transition-duration: 0.3s;
+}
+
+.item a:hover{
+    color: rgb(0, 143, 153);
+}
+
+
+.item .shoe-discount {
+    font-style: italic;
+    color: red;
+    margin-right: 20px;
+    padding-left: 15px ;
+    font-weight: 800;
+    display: block;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
+    position: absolute;
+    bottom: 24px;
+}
+.item .shoe-cost{
+    font-style: italic;
+    text-decoration: line-through;
+    padding-left: 25px;
+    color: black;
+    opacity: 0.8;
+    margin: 3px;
+    font-size: 16px;
+    position: absolute;
+    bottom: 5px;
+}
+
+/*lists nav*/
+.lists-nav a{
+    display: inline-block;
+    border: 1px solid black;
+    padding: 4px 12px;
+    margin: 12px 4px;
+    color: black;
+    text-decoration: none;
+    transition-duration: 0.2s;
+}
+.lists-nav a:hover{
+    color: aqua;
+    border: 1px solid aqua;
+}
+
+.lists button.edit {
+    bottom: 37px;
+}
+
+.lists button {
+    position: absolute;
+    bottom: 7px;
+    right: 6px;
+    padding: 2px;
+}
+
+//navi
+#navi{
+    height: 50px;
+}
+
+/* header */
+#header {
+    display: block;
+    text-align: center;
+    margin: 10px 10px 0 10px;
+}
+
+#logo {
+    margin: 0 30px 0 15px;
+    display: block;
+    width: 224px;
+    height: 50px;
+}
+#logo .logo-image{
+    float: left;
+    height: 50px;
+}
+#logo .logo-name{
+    height: 50px;
+    font-size: 30px;
+    float: left;
+    text-decoration: none;
+    color: black;
+    line-height: 48px;
+    padding: 0 10px;
+    border: 2px black solid;
+    display: block;
+}
+
+#bar{
+    height: 49px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+#nav{
+    display: inline-block;
+    margin: auto;
+}
+#nav > li{
+    display: inline-block;
+}
+#nav li{
+    position: relative;
+}
+#nav li:hover .nav_TH,
+#nav li:hover .nav_GT,
+#nav li:hover .nav_PC,
+#nav li:hover .nav_MS,
+#nav li:hover .nav_CL{
+    display: block;
+}
+#nav > li > a{
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 50px;
+}
+/* @media screen and (max-width:880px) {
+    #nav > li > a{
+        text-transform: uppercase;
+        font-size: 13px;
+        line-height: 50px;
+    }
+    #nav{
+        padding: 0 70px;
+    }
+} */
+#nav li a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 0 10px;
+    display: block;
+    transition-duration: 0.3s;    
+    border-radius: 4px;
+}   
+#nav> li:hover > a{
+    background-color: rgb(147, 239, 255);
+    color: rgb(0, 0, 0);
+}
+
+.nav_GT,
+.nav_PC,
+.nav_MS,
+.nav_CL,
+.nav_TH{
+    position:absolute;
+    box-shadow: 0 3px 12px rgb(211, 211, 211);
+    min-width: 160px;
+    display: none;
+    list-style-type: none;
+    background-color: rgb(252, 252, 252);
+    z-index: 1;
+}
+.nav_GT li a,
+.nav_PC li a,
+.nav_MS li a,
+.nav_CL li a,
+.nav_TH li a{
+    font-size: 18px;
+    line-height: 40px;
+}
+.nav_GT li:hover a,
+.nav_PC li:hover a,
+.nav_MS li:hover a,
+.nav_CL li:hover a,
+.nav_TH li:hover a{
+    background-color: rgb(183, 244, 255);
+}
+
+.image-border{
+    border: 1px solid aqua;
+}
+
+.media-body .shoe-discount {
+    font-style: italic;
+    color: red;
+    margin-right: 20px;
+    padding-left: 15px ;
+    font-weight: 800;
+    display: block;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
+}
+.media-body .shoe-cost{
+    font-style: italic;
+    text-decoration: line-through;
+    padding-left: 25px;
+    color: black;
+    opacity: 0.8;
+    margin: 3px;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+//footer
+footer.page-footer.font-small.stylish-color-dark.pt-4 {
+    background-color: #d6d6d6;
+}
+
+
+#slidebar{
+    float: left;
+}
+
+#slidebar li{
+    list-style-type: none;
+}
+
+#slidebar .SB-Menu{
+    margin: 30px 0 0 15px;
+    /* box-shadow: 0 0 10px #ccc; */
+    border: 1px solid #ccc;
+    padding-bottom: 48px;
+}
+
+.SB-Menu > li> div{
+    font-size: 16px;
+    padding: 10px;
+    font-weight: 700;
+    color: rgb(66, 66, 66);
+    border-top: 1px solid #ccc;
+    display: block;
+}
+
+.menu-brand > li,
+.menu-size > li,
+.menu-origin > li,
+.menu-color > li,
+.menu-material > li,
+.menu-sex > li{
+    font-size: 14px;
+    padding-left: 30px;
+    margin-bottom: -6px;
+    text-decoration: none;
+    color: #000;
+    display: block;
+    transition-duration: 0.2s;
+}
+
+.menu-brand > li:hover ,
+.menu-size > li:hover ,
+.menu-origin > li:hover ,
+.menu-color > li:hover ,
+.menu-material > li:hover ,
+.menu-sex > li:hover {
+    color: rgb(0, 219, 219);
+}
+
+.menu-price .box {
+    padding: 10px;
+    margin: 5px;
+    font-size: 12px;
+}
+
+.menu-price .apply{
+    background-color: black;
+    color: white;
+    margin: 5px;
+    padding: 6px;
+    float: right;
+}
+.menu-price .apply:hover{
+    cursor:pointer;
+    opacity: 0.5;
+}

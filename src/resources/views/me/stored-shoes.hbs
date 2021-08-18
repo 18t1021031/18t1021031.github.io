@@ -1,0 +1,164 @@
+<form name="container-form" class="mt-4" method="POST" action="/shoes/handle-form-actions">
+    <div>
+        <h3>Sản phẩm của tôi</h3> 
+        {{!-- {{#if deletedCount}} --}}
+        <a href="/me/trash/shoes">Thùng rác ({{deletedCount}})</a>
+        {{!-- {{/if}} --}}
+
+        <div class="mt-4 d-flex">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="checkbox-all">
+            <label class="form-check-label" for="checkbox-all">
+              Chọn tất cả
+            </label>
+          </div>
+        
+
+          <select class="form-control form-control-sm checkbox-select-all-options" name="action" required>
+            <option value="">-- Chọn hành động --</option>
+            <option value="delete">Xóa</option>
+          </select>
+
+          {{!-- <button class="btn btn-primary btn-sm check-all-submit-btm disabled">Áp dụng</button> --}}
+          
+          <button class="btn btn-primary btn-sm check-all-submit-btm" disabled>Áp dụng</button>
+        </div>   
+    </div>
+
+    <table class="table mt-4">
+        <thead>
+            <tr>
+                <th scope="col" colspan="2">#</th>
+                <th scope="col">Tên sản phẩm</th>
+                <th scope="col" colspan="2">Thời gian tạo</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each shoes}}
+            <tr>
+                <td>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="shoeIds[]" value="{{this._id}}">
+                  </div>
+                </td>
+                <td scope="row">{{sum @index 1}}</td>
+                <td>{{this.name}}</td>
+                <td>{{this.createdAt}}</td>
+                <td>
+                    <a href="/shoes/{{this._id}}/edit" class="btn btn-link">Sửa</a>
+                    <a href="" class="btn btn-link" data-id="{{this._id}}" data-toggle="modal" data-target="#delete-shoe-modal">Xóa</a>
+                </td>
+            </tr> 
+
+            {{else}}
+                <tr>
+                    <td colspan="5" class="text-center">
+                        Bạn chưa đăng sản phẩm nào.
+                        <a href="/shoes/create">Đăng sản phẩm</a>
+                    </td>
+                </tr>
+            
+            {{/each}}          
+        </tbody>
+    </table>
+</form>
+{{!-- Confirm delete --}}
+<div id="delete-shoe-modal" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Bạn có chắc chắn muốn xóa?</p>
+      </div>
+      <div class="modal-footer">
+        <button id="btn-delete-shoe" type="button" class="btn btn-danger">Xác nhận xóa</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{{!-- Delete hidden form --}}
+<form method="POST" name="delete-shoe-form"></form>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        
+        var shoeId;
+        var deleteForm = document.forms['delete-shoe-form']
+        //var containerForm = document.forms['container-form']
+        var containerForm = $('form[name="container-form"]')
+        var btnDeleteshoe = document.getElementById('btn-delete-shoe')
+        //var checkboxAll = document.getElementById('checkbox-all') 
+        var checkboxAll = $('#checkbox-all')
+        var shoeItemCheckbox = $('input[name="shoeIds[]"]')
+        var checkAllSubmitBtn = $('.check-all-submit-btm')
+
+        //when dialog confirm clicked
+        $('#delete-shoe-modal').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget) // Button that triggered the modal
+        shoeId = button.data('id') // Extract info from data-* attributes
+        }) 
+
+        //when shoe btn delete clicked
+        btnDeleteshoe.onclick = function() {
+            deleteForm.action = '/shoes/' + shoeId + '?_method=DELETE'
+            deleteForm.submit()
+        }
+
+        //checkbox-all changed
+        checkboxAll.change(function() {
+            isCheckedAll = $(this).prop('checked')
+
+            // shoeItemCheckbox.prop('checked',isCheckedAll)
+            if(isCheckedAll){
+              shoeItemCheckbox.prop('checked',true)
+            } else {
+              shoeItemCheckbox.prop('checked',false)
+            }
+            renderCheckAllSubmitBtn()
+        })
+
+        //shoe item checkbox change
+        shoeItemCheckbox.change(function() {
+            var isCheckedAllTwo =  shoeItemCheckbox.length 
+                                  === $('input[name="shoeIds[]"]:checked').length
+            checkboxAll.prop('checked', isCheckedAllTwo)
+            renderCheckAllSubmitBtn()
+
+        })
+
+
+        //check all submit btn clicked
+
+        {{!-- containerForm.on('submit', function(e) {
+          var isSubmittable = !checkAllSubmitBtn.hasClass('disabled')
+
+          if(!isSubmittable) {
+             e.preventDefault
+          } else {
+            containerForm.submit()
+          }
+        }) --}}
+
+        //re-render check all submit button (áp dụng)
+        function renderCheckAllSubmitBtn() {
+          var checkedCount = $('input[name="shoeIds[]"]:checked').length
+          if(checkedCount > 0) {
+              checkAllSubmitBtn.removeAttr('disabled') //.attr('disabled', false)
+          } else 
+              checkAllSubmitBtn.addAttr('disabled')  //.attr('disabled', true)
+
+        }
+    })
+
+    
+    
+</script>

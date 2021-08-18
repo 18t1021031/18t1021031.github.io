@@ -1,0 +1,96 @@
+<div class="mt-4">
+    <div>
+        <h3>Sản phẩm đã xóa</h3>
+        <a href="/me/stored/shoes">Danh sách sản phẩm</a>
+    </div>
+
+    <table class="table mt-4">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Tên sản phẩm</th>
+                <th scope="col" colspan="2">Thời gian xóa</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each shoes}}
+            <tr>
+                <th scope="row">{{sum @index 1}}</th>
+                <td>{{this.name}}</td>
+                <td>{{this.deletedAt}}</td>
+                <td>
+                    <a href="" class="btn btn-link btn-restore" data-id="{{this._id}}">Khôi phục</a>
+                    <a href="" class="btn btn-link" data-id="{{this._id}}" data-toggle="modal" data-target="#delete-shoe-modal">Xóa vĩnh viễn</a>
+                </td>
+            </tr> 
+
+            {{else}}
+                <tr>
+                    <td colspan="5" class="text-center">
+                        Thùng rác trống.
+                        <a href="/me/stored/shoes">Danh sách sản phẩm</a>
+                    </td>
+                </tr>
+            
+            {{/each}}          
+        </tbody>
+    </table>
+</div>
+{{!-- Confirm delete --}}
+<div id="delete-shoe-modal" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Hành động này không thể khôi phục. Bạn chắc chắn muốn xóa?</p>
+      </div>
+      <div class="modal-footer">
+        <button id="btn-delete-shoe" type="button" class="btn btn-danger">Xác nhận xóa</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{{!-- Delete hidden form --}}
+<form method="POST" name="delete-shoe-form"></form>
+<form method="POST" name="restore-shoe-form"></form>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        
+        var shoeId;
+        var deleteForm = document.forms['delete-shoe-form']
+        var restoreForm = document.forms['restore-shoe-form']
+        var btnDeleteShoe = document.getElementById('btn-delete-shoe');
+        var restoreBtn = $('.btn-restore')
+
+        //when dialog confirm clicked
+        $('#delete-shoe-modal').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget) // Button that triggered the modal
+        shoeId = button.data('id') // Extract info from data-* attributes
+        }) 
+
+        //when shoe btn delete clicked
+        btnDeleteShoe.onclick = function() {
+            deleteForm.action = '/shoes/' + shoeId + '/force?_method=DELETE'
+            deleteForm.submit()
+        }
+
+        //Restore btn click
+        restoreBtn.click(function(e) {
+          e.preventDefault()
+          var shoeId = $(this).data('id')
+        
+          restoreForm.action = '/shoes/' + shoeId + '/restore?_method=PATCH'
+          restoreForm.submit()
+        })
+  })   
+</script>

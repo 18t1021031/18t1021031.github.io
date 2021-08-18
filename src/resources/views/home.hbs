@@ -1,0 +1,143 @@
+
+<a href=""><img class="mt-2" src="https://i.imgur.com/dSqSzb6.jpg" width="100%" alt="banner"></a>
+
+{{!-- <!-- slidebar -->
+        <div id="slidebar">
+            <ul class="SB-Menu">
+                <li><div>Thương hiệu</div>
+                    <ul class="menu-brand">
+                        <li><input type="checkbox" id="Nike">    
+                            <label for="Nike">Nike</label></li>
+                        <li><input type="checkbox" id="Adidas">
+                            <label for="Adidas">Adidas</label></li>
+                        <li><input type="checkbox" id="Converse">
+                            <label for="Converse">Converse</label></li>
+                        <li><input type="checkbox" id="Puma">
+                            <label for="Puma">Puma</label></li>
+                        <li><input type="checkbox" id="Vans">
+                            <label for="Vans">Vans</label></li>
+                        <li><input type="checkbox" id="Minzuno">
+                            <label for="Minzuno">Minzuno</label></li>
+                        <li><input type="checkbox" id="New Balance">
+                            <label for="New Balance">New Balance</label></li>
+                        <li><input type="checkbox" id="Gucci">
+                            <label for="Gucci">Gucci</label></li>
+                    </ul>
+                </li>
+                    
+                <li><div>Size giày</div>
+                    <ul class="menu-size">
+                        <li><input type="checkbox" id="35">
+                            <label for="35">35</label></li>
+                        <li><input type="checkbox" id="36">
+                            <label for="36">36</label></li>
+                        <li><input type="checkbox" id="37">
+                            <label for="37">37</label></li>
+                        <li><input type="checkbox" id="38">
+                            <label for="38">38</label></li>
+                        <li><input type="checkbox" id="39">
+                            <label for="39">39</label></li>
+                        <li><input type="checkbox" id="40">
+                            <label for="40">40</label></li>
+                        <li><input type="checkbox" id="41">
+                            <label for="41">41</label></li>
+                        <li><input type="checkbox" id="42">
+                            <label for="42">42</label></li>
+                        <li><input type="checkbox" id="43">
+                            <label for="43">43</label></li>
+                    </ul>
+                </li>
+                    
+                <li><div>Xuất xứ</div>
+                    <ul class="menu menu-origin">
+                        <li><input type="checkbox" id="England">
+                            <label for="England">Anh</label></li>
+                        <li><input type="checkbox" id="Korea">
+                            <label for="Korea">Hàn Quốc</label></li>
+                        <li><input type="checkbox" id="America">
+                            <label for="America">Mỹ</label></li>
+                        <li><input type="checkbox" id="Jap">
+                            <label for="Jap">Nhật Bản</label></li>
+                        <li><input type="checkbox" id="China">
+                            <label for="China">Trung Quốc</label></li>
+                        <li><input type="checkbox" id="Vietnam">
+                            <label for="Vietnam">Việt Nam</label></li>
+                    </ul>
+                </li>
+                    
+                <li><div>Màu sắc</div>
+                    <ul class="menu menu-color">
+                        <li><input type="checkbox" id="Red">
+                            <label for="Red">Đỏ</label></li>
+                        <li><input type="checkbox" id="Orange">
+                            <label for="Orange">Cam</label></li>
+                        <li><input type="checkbox" id="Yellow">
+                            <label for="Yellow">Vàng</label></li>
+                        <li><input type="checkbox" id="Blue">
+                            <label for="Blue">Xanh dương</label></li>
+                        <li><input type="checkbox" id="Green">
+                            <label for="Green">Xanh lá</label></li>
+                        <li><input type="checkbox" id="Pink">
+                            <label for="Pink">Hồng</label></li>
+                        <li><input type="checkbox" id="Violet">
+                            <label for="Violet">Tím</label></li>
+                    </ul>
+                </li>
+                    
+                <li><div>Chất liệu</div>
+                    <ul class="menu menu-material">
+                        <li><input type="checkbox" id="DaThat">
+                            <label for="DaThat">Giày da thật</label></li>
+                        <li><input type="checkbox" id="Vai">
+                            <label for="Vai">Giày vải</label></li>
+                        <li><input type="checkbox" id="DaLon">
+                            <label for="DaLon">Giày da lộn</label></li>
+                        <li><input type="checkbox" id="DaTongHop">
+                            <label for="DaTongHop">Giày da tổng hợp</label></li>
+                        <li><input type="checkbox" id="Canvas">
+                            <label for="Canvas">Giày canvas</label></li>
+                        <li><input type="checkbox" id="PU">
+                            <label for="PU">Giày PU</label></li>
+                    </ul>
+                </li>
+                    
+                <li><div>Giới tính</div>
+                    <ul class="menu menu-sex">
+                        <li><input type="checkbox" id="Male">
+                            <label for="Male">Nam</label></li>
+                        <li><input type="checkbox" id="Female">
+                            <label for="Female">Nữ</label></li>
+                        <li><input type="checkbox" id="Unisex">
+                            <label for="Unisex">Unisex</label></li>
+                        <li><input type="checkbox" id="Child">
+                            <label for="Child">Trẻ em</label></li>
+                    </ul>
+                </li>
+                    
+                <li><div>Khoảng giá</div>
+                    <ul class="menu menu-price">
+                        <li><input class="box" type="money" placeholder="Từ"></li> 
+                        <li><input class="box" type="money" placeholder="Đến"></li>
+                        <li class="apply mb-4" >Áp dụng</li>
+                    </ul>
+                </li>
+            </ul>
+        </div> --}}
+
+
+<div id="content">
+    <div class="lists">
+        {{#each shoes}}
+        <div class="item" >
+            <a href="/shoes/{{this.slug}}"><img src="{{this.image}}" alt="">
+                {{this.name}}
+            </a>
+            <div class="shoe-discount">{{formatCash this.discount}} đ</div>
+            <div class="shoe-cost">{{formatCash this.cost}} đ</div>
+        </div>
+        {{/each}}
+    </div>
+</div>
+        
+
+

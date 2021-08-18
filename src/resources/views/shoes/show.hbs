@@ -1,0 +1,14 @@
+
+<div class="mt-4 mb-4 media ">
+  <img class="align-self-center mr-4 image-border" src="{{ shoe.image }}" height="400" alt="{{ shoe.image }}">
+  <div class="media-body">
+    <h2 class="mt-0">Tên sản phẩm: {{ shoe.name }}</h2>
+    <p class="mb-30">Mô tả: {{ shoe.description }}</p>
+    <p class="mb-30">Chất liệu: {{ shoe.material }}</p>
+    <p class="mb-30">Màu sắc: {{ shoe.color }}</p>
+    <p class="mb-30">Giới tính:  {{ shoe.gender }}</p>
+    <div class="shoe-discount">{{ formatCash shoe.discount }} đ</div>
+    <div class="shoe-cost">{{ formatCash shoe.cost }} đ</div>
+    <button class="btn btn-dark" type="button"> Mua ngay </button>
+  </div>
+</div>

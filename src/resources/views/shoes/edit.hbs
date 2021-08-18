@@ -1,0 +1,54 @@
+
+<div class="mt-4">
+    <h3>Cập nhật sản phẩm</h3>
+    <form method="POST" action="/shoes/{{ shoe._id }}?_method=PUT">
+        <div class="form-group">
+            <label for="name">Tên sản phẩm:</label>
+            <input type="text" class="form-control" value="{{shoe.name}}" id="name" name="name" placeholder="">
+        </div>
+
+        <div class="form-group">
+            <label for="image">Hình ảnh: </label>
+            <input type="text" class="form-control"  value="{{shoe.image}}" id="image" name="image" placeholder="">
+        </div>
+
+        <div class="form-group">
+            <label for="brand">Thương hiệu: </label>
+            <input type="text" class="form-control"  value="{{shoe.brand}}" id="brand" name="brand" placeholder="">
+        </div>
+
+        <div class="form-group">
+            <label for="description">Mô tả</label>
+            <textarea type="text" class="form-control" id="description" name="description" placeholder="">{{shoe.description}}
+            </textarea>
+        </div>
+
+
+        <div class="form-group">
+            <label for="material">Chất liệu: </label>
+            <input type="text" class="form-control"  value="{{shoe.material}}" id="material" name="material" placeholder="">
+        </div>
+
+        <div class="form-group">
+            <label for="color">Màu sắc: </label>
+            <input type="text" class="form-control" value="{{shoe.color}}"  id="color" name="color" placeholder="">
+        </div>
+
+        <div class="form-group">
+            <label for="gender">Giới tính: </label>
+            <input type="text" class="form-control" value="{{shoe.gender}}" id="gender" name="gender" placeholder="">
+        </div>
+
+        <div class="form-group">
+            <label for="discount">Giảm giá: </label>
+            <input type="text" class="form-control"  value="{{shoe.discount}}" id="discount" name="discount" placeholder="">
+        </div>
+
+        <div class="form-group">
+            <label for="cost">Giá gốc: </label>
+            <input type="text" class="form-control"  value="{{shoe.cost}}" id="cost" name="cost" placeholder="">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button> 
+    </form>
+</div>
