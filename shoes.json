@@ -1,0 +1,298 @@
+[{
+  "_id": {
+    "$oid": "611b7bd0e698c378f3a8d59d"
+  },
+  "name": "Giày Nike Wmns Air Jordan 1 Low Siren Red DC0774-004 ",
+  "image": "https://i.imgur.com/DyO1KYw.jpg",
+  "color": "Đen trắng",
+  "cost": 1000000,
+  "discount": 800000,
+  "gender": "Unisex",
+  "material": "Da cao cấp",
+  "description": "Giày Nike Wmns Air Jordan 1 Low Siren Red DC0774-004 ",
+  "slug": "giay-nike-wmns-air-jordan-1-low-siren-red-dc0774-004",
+  "deleted": true,
+  "deletedAt": {
+    "$date": "2021-08-19T13:55:57.998Z"
+  },
+  "updatedAt": {
+    "$date": "2021-08-19T13:55:57.999Z"
+  },
+  "brand": "Nike"
+},{
+  "_id": {
+    "$oid": "611c05850238de1e9ce8605a"
+  },
+  "deleted": false,
+  "name": "Giày Bóng Rổ Adidas Harden Vol5 Futurenatural ",
+  "image": "https://i.imgur.com/d9grcy1.jpg",
+  "brand": "Adidas",
+  "description": "Giày Bóng Rổ Adidas Harden Vol5 Futurenatural FZ1071",
+  "material": "Vải, Cao su",
+  "color": "All",
+  "gender": "Nam",
+  "discount": 3500000,
+  "cost": 3900000,
+  "createdAt": {
+    "$date": "2021-08-17T18:52:53.187Z"
+  },
+  "updatedAt": {
+    "$date": "2021-08-18T03:55:51.279Z"
+  },
+  "slug": "giay-bong-ro-adidas-harden-vol5-futurenatural-white-fz1071",
+  "__v": 0,
+  "deletedAt": null
+},{
+  "_id": {
+    "$oid": "611c05dc0238de1e9ce8606b"
+  },
+  "deleted": false,
+  "name": "Giày Thể Thao Adidas Yung-96 Chasm Schuh",
+  "image": "https://i.imgur.com/86VRr90.jpg",
+  "brand": "Adidas",
+  "description": "Giày Thể Thao Adidas Yung-96 Chasm Schuh",
+  "material": "Vải, Cao su",
+  "color": "Đen",
+  "gender": "Nam",
+  "discount": 1899000,
+  "cost": 2500000,
+  "createdAt": {
+    "$date": "2021-08-17T18:54:20.793Z"
+  },
+  "updatedAt": {
+    "$date": "2021-08-18T03:55:55.219Z"
+  },
+  "slug": "giay-the-thao-adidas-yung-96-chasm-schuh",
+  "__v": 0,
+  "deletedAt": null
+},{
+  "_id": {
+    "$oid": "611c060c0238de1e9ce86070"
+  },
+  "deleted": false,
+  "name": "Giày Thể Thao Adidas Falcon Zip",
+  "image": "https://i.imgur.com/2qUlnIQ.jpg",
+  "brand": "Adidas",
+  "description": "Giày Thể Thao Adidas Falcon Zip",
+  "material": "Da, Vải cao cấp",
+  "color": "Đen",
+  "gender": "Nam",
+  "discount": 3100000,
+  "cost": 3400000,
+  "createdAt": {
+    "$date": "2021-08-17T18:55:08.556Z"
+  },
+  "updatedAt": {
+    "$date": "2021-08-18T03:55:55.924Z"
+  },
+  "slug": "giay-the-thao-adidas-falcon-zip",
+  "__v": 0,
+  "deletedAt": null
+},{
+  "_id": {
+    "$oid": "611c06880238de1e9ce86077"
+  },
+  "deleted": false,
+  "name": "Giày Thể Thao Nike Air Jordan 1 Low Black Medium Grey",
+  "image": "https://i.imgur.com/Rde7XsS.jpg",
+  "brand": "Nike",
+  "description": "Giày Thể Thao Nike Air Jordan 1 Low Black Medium Grey",
+  "material": "Da cao cấp",
+  "color": "Đen",
+  "gender": "Nam",
+  "discount": 5900000,
+  "cost": 6300000,
+  "createdAt": {
+    "$date": "2021-08-17T18:57:12.204Z"
+  },
+  "updatedAt": {
+    "$date": "2021-08-18T03:55:56.434Z"
+  },
+  "slug": "gia-y-the-thao-nike-air-jordan-1-low-black-medium-grey",
+  "__v": 0,
+  "deletedAt": null
+},{
+  "_id": {
+    "$oid": "611c06c00238de1e9ce8607c"
+  },
+  "deleted": false,
+  "name": "Giày Thể Thao Nike Nike Air Jordan Lucky Green",
+  "image": "https://i.imgur.com/MavcZGY.jpg",
+  "brand": "Nike",
+  "description": "Giày Thể Thao Nike Nike Air Jordan 1 Low White Lucky Green 553558-129\r\n            ",
+  "material": "Da cao cấp",
+  "color": "Trắng, Xanh lá",
+  "gender": "Unisex",
+  "discount": 4670000,
+  "cost": 5500000,
+  "createdAt": {
+    "$date": "2021-08-17T18:58:08.384Z"
+  },
+  "updatedAt": {
+    "$date": "2021-08-18T03:55:57.347Z"
+  },
+  "slug": "giay-the-thao-nike-nike-air-jordan-1-low-white-lucky-green-553558-129",
+  "__v": 0,
+  "deletedAt": null
+},{
+  "_id": {
+    "$oid": "611c06ec0238de1e9ce86081"
+  },
+  "deleted": false,
+  "name": "Giày Thể Thao Nike Air Jordan 1 Low SE Spades",
+  "image": "https://i.imgur.com/jsXqB7t.jpg",
+  "brand": "Nike",
+  "description": "Giày Thể Thao Nike Air Jordan 1 Low SE Spades",
+  "material": "Da cao cấp",
+  "color": "Trắng, Đỏ",
+  "gender": "Unisex",
+  "discount": 4900000,
+  "cost": 5900000,
+  "createdAt": {
+    "$date": "2021-08-17T18:58:52.006Z"
+  },
+  "updatedAt": {
+    "$date": "2021-08-18T03:55:57.976Z"
+  },
+  "slug": "giay-the-thao-nike-air-jordan-1-low-se-spades",
+  "__v": 0,
+  "deletedAt": null
+},{
+  "_id": {
+    "$oid": "611c07270238de1e9ce86086"
+  },
+  "deleted": false,
+  "name": "Giày MLB Bigball Chunky Mono Heel Boston Red Sox ",
+  "image": "https://i.imgur.com/KUnbjlg.jpg",
+  "brand": "MBL",
+  "description": "Giày MLB Bigball Chunky Mono Heel Boston Red Sox 3ASHCM11N-43BGD\r\n            ",
+  "material": "Da cao cấp",
+  "color": "Trắng",
+  "gender": "Unisex",
+  "discount": 2690000,
+  "cost": 2900000,
+  "createdAt": {
+    "$date": "2021-08-17T18:59:51.568Z"
+  },
+  "updatedAt": {
+    "$date": "2021-08-18T03:55:58.468Z"
+  },
+  "slug": "giay-mlb-bigball-chunky-mono-heel-boston-red-sox-3ashcm11n-43bgd",
+  "__v": 0,
+  "deletedAt": null
+},{
+  "_id": {
+    "$oid": "611c07570238de1e9ce8608b"
+  },
+  "deleted": false,
+  "name": "Giày MLB Bigball Chunky Boston Red Sox",
+  "image": "https://i.imgur.com/poU0T86.jpg",
+  "brand": "MBL",
+  "description": "Giày MLB Bigball Chunky Boston Red Sox 32SHCE111-43I\r\n            ",
+  "material": "Da cao cấp",
+  "color": "Trắng",
+  "gender": "Unisex",
+  "discount": 2790000,
+  "cost": 3500000,
+  "createdAt": {
+    "$date": "2021-08-17T19:00:39.958Z"
+  },
+  "updatedAt": {
+    "$date": "2021-08-18T03:55:58.882Z"
+  },
+  "slug": "giay-mlb-bigball-chunky-boston-red-sox-32shce111-43i",
+  "__v": 0,
+  "deletedAt": null
+},{
+  "_id": {
+    "$oid": "611c077f0238de1e9ce86090"
+  },
+  "deleted": false,
+  "name": "Giày MLB Big Ball Chunky Lite La Dodgers",
+  "image": "https://i.imgur.com/jjgBqD2.jpg",
+  "brand": "MBL",
+  "description": "Giày MLB Big Ball Chunky Lite La Dodgers 32SHC3111-07L\r\n            ",
+  "material": "Da cao cấp",
+  "color": "Đen",
+  "gender": "Unisex",
+  "discount": 1990000,
+  "cost": 2500000,
+  "createdAt": {
+    "$date": "2021-08-17T19:01:19.112Z"
+  },
+  "updatedAt": {
+    "$date": "2021-08-18T03:55:59.247Z"
+  },
+  "slug": "giay-mlb-big-ball-chunky-lite-la-dodgers-32shc3111-07l",
+  "__v": 0,
+  "deletedAt": null
+},{
+  "_id": {
+    "$oid": "611c07a20238de1e9ce86095"
+  },
+  "deleted": false,
+  "name": "Giày Gucci Men's Ace Sneaker White Leather With Bee",
+  "image": "https://i.imgur.com/QK6aAdO.jpg",
+  "brand": "Gucci",
+  "description": "Giày Gucci Men's Ace Sneaker White Leather With Bee\r\n            \r\n            ",
+  "material": "Da cao cấp",
+  "color": "Trắng",
+  "gender": "Unisex",
+  "discount": 12750000,
+  "cost": 15600000,
+  "createdAt": {
+    "$date": "2021-08-17T19:01:54.352Z"
+  },
+  "updatedAt": {
+    "$date": "2021-08-18T03:55:59.900Z"
+  },
+  "slug": "giay-gucci-men-s-ace-embroidered-sneaker-white-leather-with-bee-mau-trang",
+  "__v": 0,
+  "deletedAt": null
+},{
+  "_id": {
+    "$oid": "611c07c30238de1e9ce8609a"
+  },
+  "deleted": false,
+  "name": "Giày Gucci Men's Ace Embroidered Sneaker",
+  "image": "https://i.imgur.com/KBrHvpH.jpg",
+  "brand": "Gucci",
+  "description": "Giày Gucci Men's Ace Embroidered Sneaker",
+  "material": "Da cao cấp",
+  "color": "Trắng",
+  "gender": "Unisex",
+  "discount": 15000000,
+  "cost": 16200000,
+  "createdAt": {
+    "$date": "2021-08-17T19:02:27.534Z"
+  },
+  "updatedAt": {
+    "$date": "2021-08-18T03:56:00.249Z"
+  },
+  "slug": "giay-gucci-men-s-ace-embroidered-sneaker",
+  "__v": 0,
+  "deletedAt": null
+},{
+  "_id": {
+    "$oid": "611c07e40238de1e9ce8609f"
+  },
+  "deleted": false,
+  "name": "Giày Gucci Men's Ace Sneaker With Interlocking",
+  "image": "https://i.imgur.com/rU49bHI.jpg",
+  "brand": "Gucci",
+  "description": "Giày Gucci Men's Ace Sneaker With Interlocking",
+  "material": "Da cao cấp",
+  "color": "Trắng",
+  "gender": "Unisex",
+  "discount": 13850000,
+  "cost": 14000000,
+  "createdAt": {
+    "$date": "2021-08-17T19:03:00.864Z"
+  },
+  "updatedAt": {
+    "$date": "2021-08-18T03:56:00.814Z"
+  },
+  "slug": "giay-gucci-men-s-ace-sneaker-with-interlocking",
+  "__v": 0,
+  "deletedAt": null
+}]
